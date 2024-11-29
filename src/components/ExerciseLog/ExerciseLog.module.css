@@ -1,0 +1,19 @@
+/* Custom scrollbar styling */
+.scrollbar {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #FFD700 #4B5563; /* Gold for scrollbar, dark gray for track */
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #FFD700; /* Gold scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #4B5563; /* Dark gray track */
+    border-radius: 4px; /* Rounded corners */
+}

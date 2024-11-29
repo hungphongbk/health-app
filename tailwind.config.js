@@ -72,6 +72,7 @@ module.exports = {
     preflight: false,
   },
   plugins: [
+    require('@tailwindcss/line-clamp'),
     function ({ addUtilities }) {
       addUtilities({
         '.absolute-center': {

@@ -64,7 +64,7 @@ const BodyRecordChart = () => {
   };
 
   return (
-    <div className="bg-darkslategray-100 p-6 rounded-lg shadow-md">
+    <div className="bg-darkslategray-100 p-6 shadow-md">
       <div className="flex items-center mb-4">
         <h1 className="text-white text-lg font-light font-inter mr-2">BODY<br/> RECORD</h1>
         <h2 className="text-white text-xl font-medium font-inter">2021.05.21</h2>

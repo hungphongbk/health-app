@@ -7,6 +7,7 @@ import MyRecordGraph from '../components/MyRecordGraph'
 import ComponentBtn from '../components/ComponentBtn'
 import PortalPopup from '../components/PortalPopup'
 import Web390DrawrMenue from '../components/Web390DrawrMenue'
+import DiaryEntries from '../components/DiaryEntries'
 
 const MyRecord = () => {
   const [isWeb390DrawrMenueOpen, setWeb390DrawrMenueOpen] = useState(false)
@@ -54,35 +55,12 @@ const MyRecord = () => {
         </section>
         <section className={'w-full mt-10'}>
           <MyRecordGraph/>
-          <div className="w-full flex flex-col items-start justify-start">
+          <div className="w-full flex flex-col items-start justify-start mt-10">
             <h1
-              className="m-0 w-[14.375rem] relative text-inherit tracking-[0.11px] leading-[1.688rem] font-normal font-[inherit] inline-block">
+              className="m-0 w-[14.375rem] relative text-inherit tracking-[0.11px] leading-[1.688rem] font-normal font-inter inline-block">
               MY DIARY
             </h1>
-            <div className="w-full flex flex-col items-start justify-start gap-[1.5rem]">
-              <img
-                className="w-full relative max-w-full overflow-hidden"
-                loading="lazy"
-                alt=""
-                src="/-3.svg"
-              />
-              <div className="w-full flex flex-row items-center justify-center">
-                <ComponentBtn
-                  componentBtnPosition="relative"
-                  componentBtnTop="unset"
-                  componentBtnLeft="unset"
-                  componentBtnWidth="unset"
-                  componentBtnAlignSelf="unset"
-                  componentBtnFlex="1"
-                  prop="/-88.svg"
-                  prop1="自分の日記をもっと見る"
-                  h1Width="calc(100% - 7px)"
-                  h1Height="1.625rem"
-                  h1Margin="0"
-                  h1FontWeight="400"
-                />
-              </div>
-            </div>
+            <DiaryEntries/>
           </div>
         </section>
       </div>

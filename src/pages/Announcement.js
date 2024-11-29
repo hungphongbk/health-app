@@ -1,11 +1,10 @@
-import FrameComponent3 from "../components/FrameComponent3";
 import ComponentBtn from "../components/ComponentBtn";
-import Footer from "../components/Footer";
+import RecommendCategories from '../components/RecommendCategories'
 
 const Announcement = () => {
   return (
-    <div className="w-full relative bg-white overflow-hidden flex flex-col items-end justify-start gap-[3.5rem] leading-[normal] tracking-[normal] mq640:gap-[1.75rem]">
-      <FrameComponent3 />
+    <div className="container mx-auto flex flex-col items-center justify-center">
+      <RecommendCategories/>
       <section className="w-[76rem] flex flex-row items-start justify-center pt-[0rem] px-[1.25rem] pb-[0.5rem] box-border max-w-full">
         <div className="h-[34rem] w-[64rem] relative max-w-full">
           <img
