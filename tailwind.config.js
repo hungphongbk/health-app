@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        activeLink: '#FF963C',
         white: "#fff",
         darkslategray: {
           "100": "#414141",
@@ -69,6 +70,12 @@ module.exports = {
       mq450: {
         raw: "screen and (max-width: 450px)",
       },
+    },
+  },
+  variants: {
+    extend: {
+      textDecoration: ['hover', 'focus', 'active'],
+      textColor: ['active'],
     },
   },
   corePlugins: {

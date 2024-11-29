@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import MyRecord from "./pages/MyRecord";
 import TopMyPage from "./pages/TopMyPage";
 import Component1 from "./pages/Component1";
-import Web1280Column from "./pages/Web1280Column";
+import Announcement from "./pages/Announcement";
 
 function App() {
   const action = useNavigationType();
@@ -66,7 +66,7 @@ function App() {
         <Route path="top-my-page" element={<TopMyPage />} />
         <Route path="my-record" element={<MyRecord />} />
         <Route path="component" element={<Component1 />} />
-        <Route path="column" element={<Web1280Column />} />
+        <Route path="announcement" element={<Announcement />} />
       </Route>
     </Routes>
   );

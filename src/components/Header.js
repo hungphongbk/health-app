@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import Web390DrawrMenue from "./Web390DrawrMenue";
 import PortalPopup from "./PortalPopup";
-import { useNavigate } from "react-router-dom";
 import InfoCount from "./InfoCount";
 import PropTypes from "prop-types";
 
@@ -29,42 +29,52 @@ const Header = ({ className = "" }) => {
           loading="lazy"
           alt=""
           src="/logo@2x.png"
+          onClick={onNaviMemoContainerClick}
         />
         <div className="flex items-center gap-[2rem]">
-          <div className="flex items-center gap-[0.5rem] cursor-pointer" onClick={onNaviMemoContainerClick}>
+          <NavLink
+            to="/top-my-page"
+            className={({ isActive }) =>
+              `flex items-center gap-[0.5rem] cursor-pointer no-underline ${isActive ? "text-activeLink" : "text-white"}`
+            }
+          >
             <img
               className="h-[2rem] w-[2rem]"
               loading="lazy"
               alt=""
               src="/icon-memo.svg"
             />
-            <a className="[text-decoration:none] text-white">
-              自分の記録
-            </a>
-          </div>
-          <div className="flex items-center gap-[0.5rem]">
+            自分の記録
+          </NavLink>
+          <NavLink
+            to="/my-record"
+            className={({ isActive }) =>
+              `flex items-center gap-[0.5rem] no-underline ${isActive ? "text-activeLink" : "text-white"}`
+            }
+          >
             <img
               className="h-[2rem] w-[2rem]"
               loading="lazy"
               alt=""
               src="/icon-challenge1@2x.png"
             />
-            <a className="[text-decoration:none] text-white">
-              チャレンジ
-            </a>
-          </div>
-          <div className="flex items-center gap-[0.5rem]">
+            チャレンジ
+          </NavLink>
+          <NavLink
+            to="/announcement"
+            className={({ isActive }) =>
+              `flex items-center gap-[0.5rem] no-underline ${isActive ? "text-activeLink" : "text-white"}`
+            }
+          >
             <img
               className="h-[2rem] w-[2rem]"
               loading="lazy"
               alt=""
               src="/icon-info@2x.png"
             />
-            <a className="[text-decoration:none] text-white">
-              お知らせ
-            </a>
+            お知らせ
             <InfoCount />
-          </div>
+          </NavLink>
         </div>
         <img
           className="h-[2rem] w-[2rem] cursor-pointer"
