@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const FrameComponent2 = ({ className = "" }) => {
+const MyRecordGraph = ({ className = "" }) => {
   return (
     <div
       className={`self-stretch flex flex-col items-start justify-start gap-[2.5rem] max-w-full text-center text-[0.938rem] text-gold font-hiragino-kaku-gothic-pro mq700:gap-[1.25rem] ${className}`}
@@ -231,8 +231,8 @@ const FrameComponent2 = ({ className = "" }) => {
   );
 };
 
-FrameComponent2.propTypes = {
+MyRecordGraph.propTypes = {
   className: PropTypes.string,
 };
 
-export default FrameComponent2;
+export default MyRecordGraph;

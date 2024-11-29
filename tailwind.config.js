@@ -2,6 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1100px',
+        '2xl': '1496px',
+      },
+    },
     extend: {
       colors: {
         activeLink: '#FF963C',
@@ -50,27 +60,7 @@ module.exports = {
       base: "1rem",
       "3xs": "0.625rem",
       inherit: "inherit",
-    },
-    screens: {
-      mq1280: {
-        raw: "screen and (max-width: 1280px)",
-      },
-      mq975: {
-        raw: "screen and (max-width: 975px)",
-      },
-      mq950: {
-        raw: "screen and (max-width: 950px)",
-      },
-      mq700: {
-        raw: "screen and (max-width: 700px)",
-      },
-      mq640: {
-        raw: "screen and (max-width: 640px)",
-      },
-      mq450: {
-        raw: "screen and (max-width: 450px)",
-      },
-    },
+    }
   },
   variants: {
     extend: {

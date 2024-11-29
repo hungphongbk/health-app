@@ -101,7 +101,7 @@ const Component1 = () => {
                 <ComponentPhoto />
                 <div className="flex flex-col items-start justify-start py-[0rem] pl-[0rem] pr-[0.625rem]">
                   <ComponentRecord
-                    prop="pending_I0:180;0:613"
+                    img="pending_I0:180;0:613"
                     myRecommend1="pending_I0:180;0:614"
                   />
                 </div>

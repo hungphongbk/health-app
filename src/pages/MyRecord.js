@@ -3,8 +3,7 @@ import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InfoCount from '../components/InfoCount';
 import ComponentRecord from '../components/ComponentRecord';
-import FrameComponent from '../components/FrameComponent';
-import FrameComponent2 from '../components/FrameComponent2';
+import MyRecordGraph from '../components/MyRecordGraph';
 import ComponentBtn from '../components/ComponentBtn';
 import PortalPopup from '../components/PortalPopup';
 import Web390DrawrMenue from '../components/Web390DrawrMenue';
@@ -27,69 +26,71 @@ const MyRecord = () => {
 
   return (
     <>
-      <main className="w-full flex flex-col items-center justify-center py-[2rem] px-[1rem] box-border">
-        <div className="w-full max-w-[76rem] flex flex-col items-center justify-center">
-          <section className="w-full flex flex-col items-start justify-start gap-[3.5rem] text-left text-[1.375rem] text-darkslategray-100 font-inter">
-            <div className="w-full flex flex-row items-start justify-start gap-[3rem] flex-wrap">
-              <ComponentRecord
-                prop="/-91.svg"
-                myRecommend1="/myrecommend1@2x.png"
-                divMargin="0"
-                divFontWeight="400"
+      <div className="container mx-auto flex flex-col items-center justify-center">
+        <section
+          className="w-full flex flex-col items-start justify-start gap-[3.5rem] text-left text-[1.375rem] text-darkslategray-100 font-inter">
+          <div className="w-full flex flex-row items-start justify-stretch gap-[3rem] flex-wrap mt-16">
+            <ComponentRecord
+              img="/-91.svg"
+              myRecommend1="/myrecommend1@2x.png"
+              title={'BODY RECORD'}
+              buttonText={'自分のカラダの記録'}
+            />
+            <ComponentRecord
+              img="/-91.svg"
+              myRecommend1="/myrecommend2@2x.png"
+              mYEXERCISE="MY EXERCISE"
+              title={'MY EXERCISE'}
+              buttonText={'自分の運動の記録'}
+            />
+            <ComponentRecord
+              img="/-91.svg"
+              myRecommend1="/myrecommend3@2x.png"
+              mYEXERCISE="MY DIARY"
+              title={'MY DIARY'}
+              buttonText={'自分の日記'}
+            />
+          </div>
+          <MyRecordGraph/>
+          <div className="w-full flex flex-col items-start justify-start">
+            <h1
+              className="m-0 w-[14.375rem] relative text-inherit tracking-[0.11px] leading-[1.688rem] font-normal font-[inherit] inline-block">
+              MY DIARY
+            </h1>
+            <div className="w-full flex flex-col items-start justify-start gap-[1.5rem]">
+              <img
+                className="w-full relative max-w-full overflow-hidden"
+                loading="lazy"
+                alt=""
+                src="/-3.svg"
               />
-              <FrameComponent
-                prop="/-91.svg"
-                myRecommend2="/myrecommend2@2x.png"
-                mYEXERCISE="MY EXERCISE"
-                prop1="自分の運動の記録"
-              />
-              <FrameComponent
-                prop="/-91.svg"
-                myRecommend2="/myrecommend3@2x.png"
-                mYEXERCISE="MY DIARY"
-                prop1="自分の日記"
-              />
-            </div>
-            <FrameComponent2 />
-            <div className="w-full flex flex-col items-start justify-start">
-              <h1 className="m-0 w-[14.375rem] relative text-inherit tracking-[0.11px] leading-[1.688rem] font-normal font-[inherit] inline-block">
-                MY DIARY
-              </h1>
-              <div className="w-full flex flex-col items-start justify-start gap-[1.5rem]">
-                <img
-                  className="w-full relative max-w-full overflow-hidden"
-                  loading="lazy"
-                  alt=""
-                  src="/-3.svg"
+              <div className="w-full flex flex-row items-center justify-center">
+                <ComponentBtn
+                  componentBtnPosition="relative"
+                  componentBtnTop="unset"
+                  componentBtnLeft="unset"
+                  componentBtnWidth="unset"
+                  componentBtnAlignSelf="unset"
+                  componentBtnFlex="1"
+                  prop="/-88.svg"
+                  prop1="自分の日記をもっと見る"
+                  h1Width="calc(100% - 7px)"
+                  h1Height="1.625rem"
+                  h1Margin="0"
+                  h1FontWeight="400"
                 />
-                <div className="w-full flex flex-row items-center justify-center">
-                  <ComponentBtn
-                    componentBtnPosition="relative"
-                    componentBtnTop="unset"
-                    componentBtnLeft="unset"
-                    componentBtnWidth="unset"
-                    componentBtnAlignSelf="unset"
-                    componentBtnFlex="1"
-                    prop="/-88.svg"
-                    prop1="自分の日記をもっと見る"
-                    h1Width="calc(100% - 7px)"
-                    h1Height="1.625rem"
-                    h1Margin="0"
-                    h1FontWeight="400"
-                  />
-                </div>
               </div>
             </div>
-          </section>
-        </div>
-      </main>
+          </div>
+        </section>
+      </div>
       {isWeb390DrawrMenueOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
           placement="Centered"
           onOutsideClick={closeWeb390DrawrMenue}
         >
-          <Web390DrawrMenue onClose={closeWeb390DrawrMenue} />
+          <Web390DrawrMenue onClose={closeWeb390DrawrMenue}/>
         </PortalPopup>
       )}
     </>
