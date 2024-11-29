@@ -1,28 +1,28 @@
 // src/pages/Web1280MyRecord.js
-import { useCallback, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import InfoCount from '../components/InfoCount';
-import ComponentRecord from '../components/ComponentRecord';
-import MyRecordGraph from '../components/MyRecordGraph';
-import ComponentBtn from '../components/ComponentBtn';
-import PortalPopup from '../components/PortalPopup';
-import Web390DrawrMenue from '../components/Web390DrawrMenue';
+import { useCallback, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import InfoCount from '../components/InfoCount'
+import ComponentRecord from '../components/ComponentRecord'
+import MyRecordGraph from '../components/MyRecordGraph'
+import ComponentBtn from '../components/ComponentBtn'
+import PortalPopup from '../components/PortalPopup'
+import Web390DrawrMenue from '../components/Web390DrawrMenue'
 
 const MyRecord = () => {
-  const [isWeb390DrawrMenueOpen, setWeb390DrawrMenueOpen] = useState(false);
-  const navigate = useNavigate();
+  const [isWeb390DrawrMenueOpen, setWeb390DrawrMenueOpen] = useState(false)
+  const navigate = useNavigate()
 
   const openWeb390DrawrMenue = useCallback(() => {
-    setWeb390DrawrMenueOpen(true);
-  }, []);
+    setWeb390DrawrMenueOpen(true)
+  }, [])
 
   const closeWeb390DrawrMenue = useCallback(() => {
-    setWeb390DrawrMenueOpen(false);
-  }, []);
+    setWeb390DrawrMenueOpen(false)
+  }, [])
 
   const onLogoImageClick = useCallback(() => {
-    navigate("/web-1280-top-mypage");
-  }, [navigate]);
+    navigate('/web-1280-top-mypage')
+  }, [navigate])
 
   return (
     <>
@@ -51,6 +51,8 @@ const MyRecord = () => {
               buttonText={'自分の日記'}
             />
           </div>
+        </section>
+        <section className={'w-full mt-10'}>
           <MyRecordGraph/>
           <div className="w-full flex flex-col items-start justify-start">
             <h1
@@ -94,7 +96,7 @@ const MyRecord = () => {
         </PortalPopup>
       )}
     </>
-  );
-};
+  )
+}
 
-export default MyRecord;
+export default MyRecord
